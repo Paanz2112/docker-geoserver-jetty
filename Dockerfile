@@ -16,5 +16,6 @@ RUN apt-get update -y &&\
     chown -R geoserver:geoserver /usr/share/geoserver
 
 # COPY /service/geoserver.service /usr/lib/systemd/system/geoserver.service
+COPY web.xml /usr/share/geoserver/webapps/geoserver/WEB-INF/web.xml
 
 CMD [ "bash","/usr/share/geoserver/bin/startup.sh" ]
